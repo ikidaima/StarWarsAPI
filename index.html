@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Все о StarWars</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+  <div class="content">
+    <div class="search">
+      <form class="form js-form">
+        Поиск 
+        <select name="pathname" class="form__select">
+          <option value="people/" selected>персонажа:</option>
+          <option value="planets/">планеты:</option>
+          <option value="starships/">корабля:</option>
+        </select>
+        <input name="search" type="text" class="form__object-search" required>
+        <button class="button" type="submit">Найти</button>
+      </form>
+      <ul class="search__result js-searchResult">
+        <!-- content will be included here by JS -->
+      </ul>
+    </div>
+
+    <div class="person-data">
+      <table class="person-data__table">
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+        <tbody class="js-personData">
+          <!-- content will be included here by JS -->
+        </tbody>
+      </table>
+
+      <template class="js-peopleTemplate">
+        <tr>
+          <td>Имя</td>
+          <td data-property="name"></td>
+        </tr>
+        <tr>
+          <td>Рост</td>
+          <td data-property="height"></td>
+        </tr>
+        <tr>
+          <td>Вес</td>
+          <td data-property="mass"></td>
+        </tr>
+        <tr>
+          <td>Год рождения</td>
+          <td data-property="birth_year"></td>
+        </tr>
+        <tr>
+          <td>В скольких фильмах появлялся</td>
+          <td data-property="films"></td>
+        </tr>
+      </template>
+
+      <template class="js-planetsTemplate">
+        <tr>
+          <td>Название</td>
+          <td data-property="name"></td>
+        </tr>
+        <tr>
+          <td>Диаметр</td>
+          <td data-property="diameter"></td>
+        </tr>
+        <tr>
+          <td>Популяция</td>
+          <td data-property="population"></td>
+        </tr>
+        <tr>
+          <td>Местность</td>
+          <td data-property="terrain"></td>
+        </tr>
+        <tr>
+          <td>В скольких фильмах появлялся</td>
+          <td data-property="films"></td>
+        </tr>
+      </template>
+
+      <template class="js-starshipsTemplate">
+        <tr>
+          <td>Название</td>
+          <td data-property="name"></td>
+        </tr>
+        <tr>
+          <td>Грузоподъемность</td>
+          <td data-property="cargo_capacity"></td>
+        </tr>
+        <tr>
+          <td>Длина</td>
+          <td data-property="length"></td>
+        </tr>
+        <tr>
+          <td>Максимальная скорость в атмосфере</td>
+          <td data-property="max_atmosphering_speed"></td>
+        </tr>
+        <tr>
+          <td>В скольких фильмах появлялся</td>
+          <td data-property="films"></td>
+        </tr>
+      </template>
+    </div>
+  </div>
+
+  <script src="./js/creatElement.js"></script>
+  <script src="./js/creatSubjectList.js"></script>
+  <script src="./js/showSubjectDescription.js"></script>
+  <script src="./js/StarWarsAPI.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
